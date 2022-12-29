@@ -1,0 +1,69 @@
+@use "../mixins";
+
+.new-shops {
+  margin: 70px 0 0 0;
+
+  &__title {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 31px;
+    text-transform: uppercase;
+    color: #263238;
+
+    padding: 0 0 20px 0;
+    margin: 0 0 30px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #C7BDBD;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0 1px 0 1px;
+  }
+
+  &__slider-item {
+    width: 196px;
+    height: 187px;
+    box-sizing: border-box;
+    border: 1px solid #B3B3B3;
+  }
+
+  &__slider-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider-label {
+    background: linear-gradient(90deg, #854E2C 0%, #AB4B10 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 52px;
+    text-align: center;
+  }
+}
