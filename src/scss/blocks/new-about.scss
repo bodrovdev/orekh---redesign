@@ -1,0 +1,162 @@
+@use "../mixins";
+
+.new-about {
+  background-image: url('../img/image/new-about-cover.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 70px 0 70px 0;
+  margin: 70px 0 0 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 20px 0 20px 0;
+    margin: 30px 0 0 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__graphic {
+    position: relative;
+
+    height: fit-content;
+
+    margin: 0 115px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background-color: #F5F5F5;
+
+    &:nth-child(1) {
+      left: 9px;
+    }
+    &:nth-child(2) {
+      left: 25px;
+    }
+    &:nth-child(3) {
+      left: 42px;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    height: fit-content;
+  }
+
+  &__img {
+    display: block;
+    vertical-align: top;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mixins.respond-to(mobileOnly) {
+      align-items: center;
+    }
+  }
+
+  &__desc-image {
+    margin: 0 0 5px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      align-items: flex-start;
+      
+      width: 100%;
+
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__desc-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  &__desc-title {
+    display: inline-block;
+
+    font-family: var(--font-family-default);
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 55px;
+    color: #2B2D2F;
+
+    margin: 0 0 80px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__desc-text {
+    display: inline-block;
+
+    font-family: var(--font-family-default);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2B2D2F;
+
+    margin: 0 0 25px 0;
+  }
+
+  &__desc-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+
+    width: 209px;
+    height: 52px;
+    background-color: #916139;
+    border-radius: 46px;
+    cursor: pointer;
+
+    font-family: var(--font-family-default);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #a78060;
+      transition: background-color 0.3s;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+  }
+}
