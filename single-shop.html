@@ -17,49 +17,20 @@
 <body">
   <header class="page-header">
   </header>
-	<main class="page-content">
-
-		<section class="new-heading">
-			<div class="new-heading__slider-container">
-				<div class="new-heading__slider swiper">
-					<div class="new-heading__slider-wrapper swiper-wrapper">
-						<div class="new-heading__slider-item swiper-slide">
-							<a class="new-heading__item-link base-link" href=""></a>
-							<style>
-								.new-heading__item-link {
-									background-image: url('img/image/slide-1.png');
-								}
-								@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
-									.new-heading__item-link {
-										/* background-image: url('img/image/slide-1-mobile.png'); */
-									}
-								}
-							</style>
-						</div>
-						<div class="new-heading__slider-item swiper-slide">
-							<a class="new-heading__item-link base-link" href="" style="background-image:url(img/image/slide-2.png);"></a>
-						</div>
-						<div class="new-heading__slider-item swiper-slide">
-							<a class="new-heading__item-link base-link" href="" style="background-image:url(img/image/slide-3.png);"></a>
-						</div>
-					</div>
-				</div>
-				<div class="new-heading__container base-container">
-					<button class="new-heading__slider-arrow new-heading__slider-arrow--prev base-button">
-						<svg class="new-heading__slider-icon" width="6" height="11">
-							<use href="img/icon/sprite.svg#new-header-arrow-icon"/>
-						</svg>
-					</button>
-					<button class="new-heading__slider-arrow new-heading__slider-arrow--next base-button" style="transform:rotate(180deg)">
-						<svg class="new-heading__slider-icon" width="6" height="11">
-							<use href="img/icon/sprite.svg#new-header-arrow-icon"/>
-						</svg>
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<section class="new-shops">
+<main class="page-content">
+  <section class="newShopsCatalogue-item">
+    <div class="newShopsCatalogue-item__container base-container">
+      <div class="newShopsCatalogue-item__photo-block">
+        <div class="newShopsCatalogue-item__photo-aside"></div>
+        <div class="newShopsCatalogue-item__photo-main"></div>
+      </div>
+      <div class="newShopsCatalogue-item__description-block">
+        <div class="newShopsCatalogue-item__description-main"></div>
+        <section class="similars"></section>
+      </div>
+    </div>
+  </section>
+  <section class="new-shops">
   <div class="new-shops__container base-container">
     <h1 class="new-shops__title base-title">Магазины</h1>
   </div>
@@ -129,36 +100,8 @@
   </div>
 </section>
 
-		<section class="new-about">
-			<div class="new-about__container base-container">
-				<div class="new-about__graphic">
-					<span class="new-about__line"></span>
-					<span class="new-about__line"></span>
-					<span class="new-about__line"></span>
-					<figure class="new-about__image base-figure">
-						<img class="new-about__img" src="img/image/new-about-photo.png" width="530" height="610" alt="#">
-					</figure>
-				</div>
-				<div class="new-about__desc">
-					<figure class="new-about__desc-image base-figure">
-						<img class="new-about__desc-img" src="img/image/new-about-nut.png" width="79" height="92" alt="#">
-					</figure>
-					<h1 class="new-about__desc-title base-title">Торгово-развлекательный центр ОРЕХ</h1>
-					<p class="new-about__desc-text base-par">
-						В Орехе можно найти все необходимое и удовлетворить любые Ваши потребности.
- 						Более 100 магазинов с широким ассортиментом и спектром услуг: 
-						одежда и обувь, парфюмерия и косметика, часы и ювелирные украшения, бытовая техника
-						и электроника, спортивные товары, мебельный центр, дом быта, банки и салоны сотовой связи.
-					</p>
-					<button class="new-about__desc-button main-button base-button">
-						<span class="main-button__text">Узнать больше</span>
-					</button>
-				</div>
-			</div>
-		</section>
-
-	</main>
-	    <footer class="page-footer"></footer>
+</main>
+    <footer class="page-footer"></footer>
     <script src="js/index.min.js"></script>
   </body>
 </html>
