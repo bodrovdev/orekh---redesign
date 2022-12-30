@@ -75,7 +75,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #a78060;
+      background-color: var(--color-flush-orange);
 
       transition: background-color 0.3s;
     }

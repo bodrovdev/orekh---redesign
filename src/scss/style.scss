@@ -20,6 +20,8 @@
 @use 'global/fonts';
 
 //БЭМ блоки
+@use 'blocks/main-button';
+
 @use 'blocks/page-header';
 @use 'blocks/page-content';
 @use 'blocks/page-footer';

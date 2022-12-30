@@ -131,29 +131,7 @@
   }
 
   &__desc-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 40px;
-
-    width: 209px;
-    height: 52px;
-    background-color: #916139;
-    border-radius: 46px;
-    cursor: pointer;
-
-    font-family: var(--font-family-default);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFFFF;
-
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #a78060;
-      transition: background-color 0.3s;
-    }
+    width: 210px;
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
