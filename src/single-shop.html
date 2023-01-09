@@ -3,16 +3,49 @@
   <section class="newShopsCatalogue-item">
     <div class="newShopsCatalogue-item__container base-container">
       <div class="newShopsCatalogue-item__photo-block">
-        <div class="newShopsCatalogue-item__photo-aside"></div>
-        <div class="newShopsCatalogue-item__photo-main"></div>
+        <div class="newShopsCatalogue-item__photo-aside">
+          <div class="newShopsCatalogue-item__aside-naming"></div>
+          <div class="newShopsCatalogue-item__aside-work newShopsCatalogue-item__aside-item">
+            <span class="newShopsCatalogue-item__aside-label"></span>
+            <a class="newShopsCatalogue-item__aside-link base-link" href="#"></a>
+          </div>
+          <div class="newShopsCatalogue-item__aside-phone newShopsCatalogue-item__aside-item">
+            <span class="newShopsCatalogue-item__aside-label"></span>
+            <a class="newShopsCatalogue-item__aside-link base-link" href="#"></a>
+          </div>
+        </div>
+        <div class="newShopsCatalogue-item__photo-main">
+          <img class="newShopsCatalogue-item__photo-img" src="" alt="#">
+          <img class="newShopsCatalogue-item__photo-img" src="" alt="#">
+          <img class="newShopsCatalogue-item__photo-img" src="" alt="#">
+        </div>
       </div>
       <div class="newShopsCatalogue-item__description-block">
-        <div class="newShopsCatalogue-item__description-main"></div>
-        <section class="similars"></section>
+        <div class="newShopsCatalogue-item__description-main">
+          <div class="newShopsCatalogue-item__description-text"></div>
+          
+          <section class="newPromos">
+            <div class="newPromos__heading">
+              <span class="newPromos__label"></span>
+              <div class="newPromos__counter"></div>
+            </div>
+            <div class="newPromos__body">
+              <div class="newPromos__slider swiper">
+                <div class="newPromos__slider-wrapper swiper-wrapper">
+                  <div class="newPromos__slider-slide swiper-slide">
+                    <figure class="newPromos__slide-image base-figure">
+                      <img class="newPromos__slide-img" src="" alt="#">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
   </section>
   @@include('components/_bem/_new-shops.html')
-
 </main>
 @@include('components/_base/_base-footer.html')
