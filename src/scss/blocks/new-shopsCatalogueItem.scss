@@ -1,0 +1,260 @@
+@use "../mixins";
+
+.new-shopsCatalogueItem {
+  padding: 205px 0 0 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 90px 0 0 0;
+  }
+
+  &__photo-block {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    margin: 0 0 65px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__photo-aside {
+    display: flex;
+    flex-direction: column;
+
+    height: inherit;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      margin: 0 50px 0 0;
+    }
+  }
+
+  &__aside-naming {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 auto 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__naming-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__naming-title {
+    font-weight: 400;
+    line-height: 48px;
+    color: #212121;
+
+    @include mixins.respond-to(desktopS) {
+      font-size: 25px;
+    }
+    @include mixins.respond-to(desktopD) {
+      font-size: 34px;
+    }
+  }
+
+  &__aside-item {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 20px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__aside-label {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #212121;
+
+    margin: 0 0 5px 0;
+  }
+
+  &__aside-text, .new-shopsCatalogueItem__aside-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #757575;
+  }
+
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 85px;
+    height: 65px;
+    background-color: #EFEFEF;
+
+    margin: 0 25px 10px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  &__naming-desc {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__photo-main {
+    @include mixins.respond-to(mobileOnly) {
+      display: block;
+      min-width: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__slider {
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: 285px;
+    }
+    @include mixins.respond-to(tabletOnly) {
+      width: 305px;
+      height: 285px;
+    }
+  }
+
+  &__slider-wrapper {
+    @include mixins.respond-to(desktopS) {
+      display: grid;
+      grid-template: 1fr / repeat(2, auto);
+      grid-gap: 20px;
+    }
+    @include mixins.respond-to(desktopM) {
+      grid-template: 1fr / repeat(3, auto);
+      grid-gap: 25px;
+    }
+  }
+
+  &__slider-slide {
+    @include mixins.respond-to(desktopS) {
+      height: fit-content;
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @include mixins.respond-to(desktopM) {
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+
+  &__photo-image {
+    display: inline-block;
+
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  &__photo-img {
+    display: block;
+    width: 305px;
+    height: 285px;
+    object-fit: cover;
+    vertical-align: top;
+
+    transition: transform 0.3s;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      height: 285px;
+    }
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+      height: 285px;
+    }
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &__description-block {
+    display: flex;
+    justify-content: space-between;
+
+    @include mixins.respond-to(desktopS) {
+      align-items: flex-start;
+    }
+    @include mixins.respond-to(desktopM) {
+      align-items: flex-end;
+    }
+  }
+
+  &__description-text {
+    @include mixins.respond-to(tabletOnly) {
+      max-width: 330px;
+    }
+    @include mixins.respond-to(desktopS) {
+      max-width: 580px;
+    }
+    @include mixins.respond-to(desktopD) {
+      max-width: 940px;
+    }
+  }
+
+  &__description-text h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #263238;
+
+    margin: 0 0 15px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__description-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #757575;
+
+    margin: 0 0 10px 0;
+    
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  & ~ .new-shops {
+    padding: 0 0 70px 0
+  }
+}
+
+.new-shopsCatalogueItem__photo-block .new-shopsCatalogueItem__photo-main {
+  @include mixins.respond-to(mobileOnly) {
+    width: 100%;
+  }
+}

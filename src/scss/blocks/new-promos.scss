@@ -1,0 +1,82 @@
+@use "../mixins";
+
+.new-promos {
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 0 15px 0;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #263238;
+  }
+
+  & .new-promos__slider-pagination {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__slider {
+    width: 305px;
+    max-width: 305px;
+  }
+
+  &__slider-slide {
+    width: 305px;
+    box-sizing: border-box;
+    background-color: #F0F3F4;
+    border: 1px solid #CFD8DC;
+  }
+
+  &__slide-image {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__slide-img {
+    display: block;
+    width: 305px;
+    height: 140px;
+    object-fit: cover;
+    vertical-align: top;
+  }
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 180px;
+
+    padding: 20px;
+  }
+
+  &__info-main {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 22px;  
+    text-align: center;
+    color: #263238;
+
+    margin: 0 0 auto 0;
+  }
+
+  &__info-second {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    color: #BDBDBD;
+
+    margin: auto 0 0 0;
+  }
+}

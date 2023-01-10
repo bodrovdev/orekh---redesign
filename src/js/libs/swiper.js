@@ -50,3 +50,37 @@ let new_shops_slider = new Swiper(".new-shops__slider", {
     }
   }
 });
+
+let new_promos_slider = new Swiper(".new-promos__slider", {
+  slidesPerView: 1,
+  spaceBetween: 5,
+
+  pagination: {
+    el: ".new-promos__slider-pagination",
+    type: "fraction",
+  },
+});
+
+var shopItemInit = false;
+
+function shopItemSwiperFunc() {
+  if (window.innerWidth <= 1023) {
+    if (!shopItemInit) {
+      shopItemInit = true;
+      var shopItemSwiper = new Swiper(".new-shopsCatalogueItem__slider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: "true",
+        // navigation: {
+        //   nextEl: '.new-shopsCatalogueItem__slider-arrow--next',
+        //   prevEl: '.new-shopsCatalogueItem__slider-arrow--prev',
+        // },
+      });
+    }
+  } else if (shopItemInit) {
+    shopItemSwiper.destroy();
+    shopItemInit = false;
+  }
+}
+shopItemSwiperFunc();
+window.addEventListener("resize", shopItemSwiperFunc);
