@@ -13,8 +13,8 @@ let new_heading_slider = new Swiper(".new-heading__slider", {
   },
 
   navigation: {
-    nextEl: ".new-heading__slider-arrow--next",
-    prevEl: ".new-heading__slider-arrow--prev",
+    nextEl: ".arrows__arrow--next",
+    prevEl: ".arrows__arrow--prev",
   },
 });
 
@@ -55,6 +55,11 @@ let new_promos_slider = new Swiper(".new-promos__slider", {
   slidesPerView: 1,
   spaceBetween: 5,
 
+  navigation: {
+    nextEl: ".arrows__arrow--next",
+    prevEl: ".arrows__arrow--prev",
+  },
+
   pagination: {
     el: ".new-promos__slider-pagination",
     type: "fraction",
@@ -68,13 +73,14 @@ function shopItemSwiperFunc() {
     if (!shopItemInit) {
       shopItemInit = true;
       var shopItemSwiper = new Swiper(".new-shopsCatalogueItem__slider", {
+        centeredSlides: true,
         slidesPerView: 1,
         spaceBetween: 10,
         loop: "true",
-        // navigation: {
-        //   nextEl: '.new-shopsCatalogueItem__slider-arrow--next',
-        //   prevEl: '.new-shopsCatalogueItem__slider-arrow--prev',
-        // },
+        navigation: {
+          nextEl: ".arrows__arrow--next",
+          prevEl: ".arrows__arrow--prev",
+        },
       });
     }
   } else if (shopItemInit) {
